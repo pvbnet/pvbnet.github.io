@@ -1,4 +1,3 @@
-# Readme
 
 These are source files for my blog at [https://pvbnet.github.io](https://pvbnet.github.io). 
 
