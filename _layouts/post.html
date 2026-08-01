@@ -8,10 +8,24 @@ layout: default
     {% if page.date %}
       <time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
     {% endif %}
+    {% assign author = page.author | default: site.author.name %}
+    {% assign author_url = page.author_url | default: site.social.github %}
+    {% if author %}
+      <span class="post-author">
+        {% if author_url %}
+          <a href="{{ author_url }}">{{ author }}</a>
+        {% else %}
+          {{ author }}
+        {% endif %}
+      </span>
+    {% endif %}
   </div>
   <h1 class="post-title">
     <div>{{ page.title }}</div>
   </h1>
+  {% if page.subtitle %}
+    <p class="post-subtitle">{{ page.subtitle }}</p>
+  {% endif %}
 
   {{ content }}
 

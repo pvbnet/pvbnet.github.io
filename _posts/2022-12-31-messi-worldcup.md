@@ -3,6 +3,7 @@ layout: post
 title: "Messi won the World Cup for all of us"
 subtitle: "This victory unlocked a shared sense of fulfillment"
 author: "Peter van Beek"
+author_url: "https://github.com/pvbnet"
 ---
 
 I felt intense joy when the soccer World Cup final between Argentina and France culminated in a triumph for Lionel Messi. I, probably along with [many others](https://www.espn.com/soccer/fifa-world-cup/story/4835721/the-world-cup-belongs-to-lionel-messi), desperately wanted Messi to win this World Cup. “Wait,” you will ask, “how can you say this?”

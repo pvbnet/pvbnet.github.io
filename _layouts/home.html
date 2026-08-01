@@ -6,12 +6,20 @@ layout: default
   {% for post in paginator.posts %}
     <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
       <div>
-        <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
+        <div class="catalogue-meta">
+          <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
+          {% assign author = post.author | default: site.author.name %}
+          {% if author %}
+            <span class="catalogue-author">{{ author }}</span>
+          {% endif %}
+        </div>
         <h1 class="catalogue-title">{{ post.title }}</h1>
         <div class="catalogue-line"></div>
 
         <p>
-          {% if post.excerpt %}
+          {% if post.subtitle %}
+            {{ post.subtitle }}
+          {% elsif post.excerpt %}
             {{ post.excerpt | strip_html | truncatewords: 65 }}
           {% else %}
             {{ post.content | strip_html | truncatewords: 65 }}
