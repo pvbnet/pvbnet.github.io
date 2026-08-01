@@ -11,6 +11,7 @@ author:
 
 # Build settings
 markdown:       kramdown
+excerpt_separator: <!--more-->
 
 # Assets
 sass:

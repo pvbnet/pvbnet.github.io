@@ -40,6 +40,33 @@
     margin: 0 auto 0.5rem;
   }
 
+  figure.post-figure {
+    margin: 0 0 1rem;
+    text-align: center;
+
+    img {
+      margin: 0 auto 0.5rem;
+    }
+
+    figcaption {
+      color: $default-tint;
+      font-family: $sans-serif;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  }
+
+  p:has(> img:only-child) {
+    text-align: center;
+  }
+
+  img.formula {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    zoom: 0.85;
+  }
+
   img + em {
     color: $default-tint;
     display: block;
