@@ -3,6 +3,7 @@ layout: post
 title: "We do know how AI models work"
 author: "Peter van Beek"
 author_url: "https://github.com/pvbnet"
+tags: ["AI","LLM", "neural nets", "model layers"]
 ---
 
 Please stop saying we don't know how artificial neural networks work!
