@@ -1,6 +1,5 @@
 * {
   @include box-sizing;
-  line-height: 1.65;
 }
 
 html,
@@ -21,6 +20,7 @@ html {
 }
 
 body {
+  line-height: 1.65;
   -webkit-text-size-adjust: 100%;
 }
 
