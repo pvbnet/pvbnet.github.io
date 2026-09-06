@@ -1,0 +1,70 @@
+image	y_1 = b_1 + w_{11}x_1 + w_{12}x_2 + \cdots + w_{1n}x_n	->	../assets/posts/2026-08-01-nn-attention-and-nlm/eqn/eq01.png
+image	y_2 = b_2 + w_{21}x_1 + w_{22}x_2 + \cdots + w_{2n}x_n	->	../assets/posts/2026-08-01-nn-attention-and-nlm/eqn/eq02.png
+unicode	x_i	->	*x*ᵢ
+unicode	b	->	*b*
+unicode	y	->	*y*
+unicode	0	->	0
+image	y_{r,c} = \sum_{u=-1}^{1}\sum_{v=-1}^{1} k_{u,v}\, x_{r+u,\, c+v}	->	../assets/posts/2026-08-01-nn-attention-and-nlm/eqn/eq03.png
+image	x_{r+u,c+v}	->	../assets/posts/2026-08-01-nn-attention-and-nlm/eqn/eq04.png  [was inline -- now breaks paragraph flow]
+unicode	(r,c)	->	(*r*,*c*)
+image	k_{u,v}	->	../assets/posts/2026-08-01-nn-attention-and-nlm/eqn/eq05.png  [was inline -- now breaks paragraph flow]
+unicode	k	->	*k*
+unicode	w	->	*w*
+image	\mathbf{y} = \mathbf{W}\mathbf{x}.	->	../assets/posts/2026-08-01-nn-attention-and-nlm/eqn/eq06.png
+unicode	\mathbf{x}	->	**x**
+unicode	\mathbf{W}	->	**W**
+unicode	\mathbf{y}	->	**y**
+unicode	\mathbf{x}_i	->	**x**ᵢ
+unicode	\mathbf{x}_j	->	**x**ⱼ
+unicode	\mathbf{x}	->	**x**
+unicode	i	->	*i*
+unicode	j	->	*j*
+unicode	\mathbf{x}	->	**x**
+unicode	i	->	*i*
+unicode	j	->	*j*
+unicode	i	->	*i*
+unicode	j	->	*j*
+unicode	\mathbf{x}_i	->	**x**ᵢ
+image	\mathbf{q}_i = \mathbf{W}_Q\mathbf{x}_i,\qquad
+\mathbf{k}_i = \mathbf{W}_K\mathbf{x}_i,\qquad
+\mathbf{v}_i = \mathbf{W}_V\mathbf{x}_i.	->	../assets/posts/2026-08-01-nn-attention-and-nlm/eqn/eq07.png
+unicode	\mathbf{q}_i	->	**q**ᵢ
+unicode	\mathbf{k}_j	->	**k**ⱼ
+unicode	\mathbf{v}_j	->	**v**ⱼ
+unicode	j	->	*j*
+unicode	i	->	*i*
+unicode	j	->	*j*
+image	s_{ij} = \mathbf{q}_i^T\mathbf{k}_j = q_{i1} k_{j1} + q_{i2} k_{j2} + \cdots + q_{in} k_{jn}.	->	../assets/posts/2026-08-01-nn-attention-and-nlm/eqn/eq08.png
+unicode	0	->	0
+image	\alpha_{ij} =
+\frac{\exp\left(s_{ij}/D\right)}
+{\sum_{m=1}^{n}\exp\left(s_{im}/D\right)}.	->	../assets/posts/2026-08-01-nn-attention-and-nlm/eqn/eq09.png
+unicode	\alpha_{ij}	->	αᵢⱼ
+unicode	j	->	*j*
+unicode	D	->	*D*
+image	\mathbf{y}_i = \sum_{j=1}^{n}\alpha_{ij}\mathbf{v}_j.	->	../assets/posts/2026-08-01-nn-attention-and-nlm/eqn/eq10.png
+unicode	i	->	*i*
+image	d_{ij} = \|\mathbf{x}_i - \mathbf{x}_j\|^2	->	../assets/posts/2026-08-01-nn-attention-and-nlm/eqn/eq11.png
+unicode	\alpha	->	α
+image	\omega_{ij} =
+\frac{\exp\left(-d_{ij}/H\right)}
+{\sum_{m=1}^{n}\exp\left(-d_{im}/H\right)}	->	../assets/posts/2026-08-01-nn-attention-and-nlm/eqn/eq12.png
+unicode	H	->	*H*
+unicode	H	->	*H*
+unicode	H	->	*H*
+image	\mathbf{y}_i = \sum_{j=1}^{n}\omega_{ij}\mathbf{x}_j.	->	../assets/posts/2026-08-01-nn-attention-and-nlm/eqn/eq13.png
+image	\mathbf{y}_i =
+\frac{1}{\mathcal{C}(\mathbf{x})}
+\sum_{\forall j}f(\mathbf{x}_i,\mathbf{x}_j)g(\mathbf{x}_j).	->	../assets/posts/2026-08-01-nn-attention-and-nlm/eqn/eq14.png
+unicode	f	->	*f*
+unicode	g	->	*g*
+image	\mathcal{C}(\mathbf{x})	->	../assets/posts/2026-08-01-nn-attention-and-nlm/eqn/eq15.png  [was inline -- now breaks paragraph flow]
+unicode	f	->	*f*
+unicode	g	->	*g*
+unicode	f	->	*f*
+unicode	g	->	*g*
+unicode	\mathbf{X}	->	**X**
+unicode	\mathbf{G}	->	**G**
+unicode	y_i	->	*y*ᵢ
+unicode	\mathbf{X}	->	**X**
+unicode	\mathbf{G}	->	**G**
