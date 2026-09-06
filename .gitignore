@@ -4,3 +4,5 @@ vendor/bundle
 .sass-cache
 _site
 backup/
+_scripts/.venv
+.cursor/
